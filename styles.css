@@ -1,8 +1,8 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 body {
-  margin: 40px;
-  padding: 40px;
+  margin: 0;
+  padding: 0;
   background-color: white;
 }
 
@@ -18,18 +18,99 @@ body {
   display: flex; 
   flex-direction: row; 
   align-items: center; 
-  cursor: pointer; 
+  cursor: pointer;
+}
 
 .icon {
-  width: 110px;
-  height: 110px;
-  margin-right: 40px; 
+  width: 50px;
+  height: 50px;
+  margin-right: 20px; 
 }
 
 .name {
-  display: none; 
-  font-size: 60px;
+  display: none;
+  font-size: 20px;
   font-weight: bold;
   color: #333;
 }
+
+.container1 {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 100px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
+
+.image-section {
+  object-fit: contain;
+  display: flex;
+  justify-content: left;
+  align-items:left;
+  margin: 10px;
+  width: 100%;
+  transition: transform 0.9s ease-out;
+  padding-left: 70px;
+  
+}
+
+.content-img {
+  max-height: 570px;
+  max-width: 570px;
+ margin-top: -70px;
+}
+
+.text-section {
+  flex: 1;
+  text-align: right;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+ margin-top: -250px;
+ padding-right: 280px;
+}
+
+
+.text-section h2 {
+  text-align: left;
+  font-size:medium;
+  color: #000;
+  margin-top: -300px;
+}
+
+.text-section span {
+  text-align: left;
+  font-size: 2rem;
+  color: #808080;
+  margin-top: 10px;
+}
+
+.price {
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #f48a34;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #e3791f;
+}
+
+.show {
+  display: flex;
+}
+
+
