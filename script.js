@@ -1,10 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const menus = document.querySelectorAll(".menu");
+const menuItems = document.querySelectorAll('.menu');
 
-  menus.forEach(menu => {
-    menu.addEventListener("click", () => {
-      menus.forEach(item => item.classList.remove("active"));
-      menu.classList.add("active");
+menuItems.forEach(menu => {
+  menu.addEventListener('click', () => {
+    menuItems.forEach(item => {
+      item.querySelector('.name').style.display = 'none';
     });
+    const nameElement = menu.querySelector('.name');
+    if (nameElement.style.display === 'none' || nameElement.style.display === '') {
+      nameElement.style.display = 'inline-block';
+    } else {
+      nameElement.style.display = 'none';
+    }
   });
 });
