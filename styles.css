@@ -71,6 +71,7 @@ body {
   align-items: flex-end; 
  margin-top: -250px;
  padding-right: 280px;
+ text-align: justify;
 }
 
 
@@ -87,7 +88,11 @@ body {
   color: #808080;
   margin-top: 10px;
 }
+.text-section p {
+  margin-left: 560px;
 
+
+}
 .price {
   font-size: 2rem;
   color: #000;
