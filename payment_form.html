@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="payment_form.css">
+    <style>
+        .close-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #8175d3;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .close-btn:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="close-btn" onclick="closePage()">×</button>
+
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Billing Address</h3>
+                    <div class="input-box">
+                        <span>Full Name :</span>
+                        <input type="text" required placeholder="Name Surname">
+                    </div>
+                    <div class="input-box">
+                        <span>Email :</span>
+                        <input type="email" required placeholder="example@example.com">
+                    </div>
+                    <div class="input-box">
+                        <span>Address :</span>
+                        <input type="text" required placeholder="Street, House number ">
+                    </div>
+                    <div class="input-box">
+                        <span>City :</span>
+                        <input type="text" required placeholder="City">
+                    </div>
+
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>State :</span>
+                            <input type="text" required placeholder="State">
+                        </div>
+                        <div class="input-box">
+                            <span>Zip Code :</span>
+                            <input type="number" required placeholder="Zip Code">
+                        </div>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="closePage()">×</button>
+                <div class="column">
+                    <h3 class="title">Payment</h3>
+                    <div class="input-box">
+                        <span>Cards Accepted :</span>
+                        <img src="media/card_img.png" alt="cards">
+                    </div>
+                    <div class="input-box">
+                        <span>Name On Card :</span>
+                        <input type="text" required placeholder="Name Surname">
+                    </div>
+                    <div class="input-box">
+                        <span>Credit Card Number :</span>
+                        <input type="number" required placeholder="1111 2222 3333 4444">
+                    </div>
+                    <div class="input-box">
+                        <span>Exp. Month :</span>
+                        <input type="text" required placeholder="Month">
+                    </div>
+                
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>Exp. Year :</span>
+                            <input type="number" required placeholder="Year">
+                        </div>
+                        <div class="input-box">
+                            <span>CVV :</span>
+                            <input type="number" required placeholder="123">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <div class="thank-you-dialog" id="thankYouDialog">
+        <h3>Thank You!</h3>
+        <p>Your payment has been successfully submitted.</p>
+        <button onclick="closeDialog()">Go to store</button>
+    </div>
+
+    <script>
+        function closePage() {
+            if (confirm('Are you sure you want to close this page?')) {
+                window.location.href = 'store.html';
+            }
+        }
+    </script>
+    <script src="payment_form.js"></script>
+</body>
+
+</html>
