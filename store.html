@@ -8,160 +8,12 @@
 </head>
 <style>
     @font-face { font-family: Loubag; src: url('Loubag-Regular.ttf')};
-    .header1 {
-                position: relative;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .navbar {
-                position: relative;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 55px;
-                display: flex;
-                align-items: center;
-                padding: 5px 10px;
-                z-index: 10;
-                font-weight: bold;
-                background: rgba(255, 255, 255, 0); 
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                background-color: black;
-            }
-
-            .nav-links {
-                list-style: none;
-            }
-
-            .nav-links a {
-                text-decoration: none;
-                color: white;
-                font-size: 20px;
-            }
-            .left-links {
-                position: absolute;
-                left: 5%;
-                transform: translateX(-5%);
-                display: flex;
-                justify-content: left;
-                align-items: center;
-                gap: 25px;
-            }
-
-            .logo {
-                position: absolute;
-                left: 42%;
-                transform: translateX(-50%);
-                transform: translateY(-40%);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: -8px;
-            }
-            .right-links {
-                position: absolute;
-                left: 90%;
-                transform: translateX(-80%);
-                display: flex;
-                justify-content: right;
-                align-items: center;
-                padding: 10px;
-                border: 1px solid white;
-                margin-top: -20px;
-                border-radius: 10% / 25%;
-            }
-            .logo img {
-                height: 120px;
-                border: none;
-                box-shadow: none;
-                width: 200px;
-            }
-           
-            .custom-footer {
-            background-color: #FEB200;
-            height: 250px;
-            text-align: center;
-            padding: 20px 0;
-            bottom: 0;
-            left: 0;
-            }
-
-            #logo_footer {
-                margin-bottom: 60px;
-                margin-top: 60px;
-            }
-        
-
-            .footer-nav {
-            position: relative;
-            top: 10%;
-            margin-top: 40px;
-            margin-bottom: 40px; 
-            }
-
-            .footer-policies {
-            margin-top: 70px;
-            margin-bottom: 20px; 
-            
-            }
-
-            .footer-link, .policy-link {
-            text-decoration: none;
-            color: #000;
-            font-size: 18px;
-            margin: 0 10px; 
-            font-weight: bold;
-            }
-            
-            .policy-link {
-                font-size: 14px;
-            }
-
-            .footer-link:hover, .policy-link:hover {
-            color: #fff; 
-            }
-
-            .separator {
-            color: #000;
-            margin: 0 5px; 
-            }
-
-            .social-icons a {
-            display: inline-block;
-            margin: 20px 10px 0; 
-            transition: transform 0.9s ease;
-            }
-
-            .social-icons a img {
-            width: 20px; 
-            height: 20px;
-            }
-
-            .social-icons a:hover {
-            transform: scale(1.2);
-            }
+    
 </style>
-<body>
-    <header class="header1">
-        <nav class="navbar">
-            <div class="nav-links">
-                <div class="left-links">
-                    <a href="#">Our Story</a>
-                    <a href="#">Collection</a>
-                    <a href="#">Store</a>
-                </div>
-                <div class="logo">
-                    <img src="media/logo.svg" alt="Organelo Logo">
-                </div>
-                <div class="right-links">
-                    <a href="#">Contact Us</a>
-                </div>
-                </div>
-        </nav>
-    </header>
+<body class="">
+    
     <div class="container">
-        <header class="h2">
+        <header>
             <h1>Our collection</h1>
             <div class="icon-cart">
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
@@ -180,42 +32,11 @@
             
         </div>
         <div class="btn">
-            <button class="close">Close</button>
+            <button class="close">CLOSE</button>
             <button class="checkOut">Check Out</button>
         </div>
     </div>
 
-   
-    <footer class="custom-footer">
-        <div class="logo">
-            <img id="logo_footer" src="media/logo.svg" alt="Organelo Logo">
-        </div>
-
-        <nav class="footer-nav">
-          <a href="#" class="footer-link">OUR STORY</a>
-          <span class="separator">|</span>
-          <a href="#" class="footer-link">COLLECTION</a>
-          <span class="separator">|</span>
-          <a href="#" class="footer-link">STORE</a>
-          <span class="separator">|</span>
-          <a href="#" class="footer-link">CONTACT US</a>
-        </nav>
-      
-        <div class="social-icons">
-          <a href="#"><img src="media/instragram.svg" alt="Instagram"></a>
-          <a href="#"><img src="media/tiktok.svg" alt="TikTok"></a>
-          <a href="#"><img src="media/facebook.svg" alt="Facebook"></a>
-          <a href="#"><img src="media/linkedin.svg" alt="LinkedIn"></a>
-        </div>
-      
-        <div class="footer-policies">
-          <a href="#" class="policy-link">PRIVACY POLICY</a>
-          <span class="separator">|</span>
-          <a href="#" class="policy-link">TERMS & CONDITIONS</a>
-          <span class="separator">|</span>
-          <a href="#" class="policy-link">RETURN & REFUND POLICY</a>
-        </div>
-      </footer>
-      <script src="store.js"></script>
+    <script src="store.js"></script>
 </body>
 </html>
