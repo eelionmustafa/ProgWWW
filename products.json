@@ -1,0 +1,53 @@
+[
+    {
+        "id":1,
+        "name":"Tumeric",
+        "price":10,
+        "image":"image/Turmeric.png"
+    },
+    {
+        "id": 2,
+        "name":" Black Pepper",
+        "price": 10,
+        "image": "image/Black Pepper.png"
+       
+    },
+    {
+        "id": 3,
+        "name":" Green Cardamom",
+        "price": 8,
+        "image": "image/Cardamom.png"
+    },
+    {
+        "id": 4,
+        "name":"Star Anise",
+        "price": 15,
+        "image": "image/Star Anise.png"
+    },
+    {
+        "id": 5,
+        "name":" Zaatar",
+        "price": 4,
+        "image": "image/Zaatar.png"
+    },
+    {
+        "id": 6,
+        "name":" Saffron",
+        "price": 20,
+        "image": "image/Saffron.png"
+    },
+    {
+        "id": 7,
+        "name":" Ras el Hanout",
+        "price": 30,
+        "image": "image/Ras el Hanout.png"
+    },
+    {
+        "id":8,
+        "name":"Mahlab",
+        "price":10,
+        "image":"image/Mahlab.png"
+
+    }
+
+]
