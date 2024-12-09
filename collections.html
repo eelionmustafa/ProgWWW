@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Collection</title>
+    <style>
+        @font-face { font-family: Loubag; src: url('Loubag-Regular.ttf'); } 
+        
+            body {
+            font-family: "Quicksand", sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #000; 
+            overflow-x: hidden;
+            }
+            header {
+            position: relative;
+            height: 12vh;
+            }
+
+            .navbar {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                padding: 5px 10px;
+                z-index: 10;
+                font-weight: bold;
+                background: rgba(255, 255, 255, 0); 
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links {
+                list-style: none;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+            }
+            .left-links {
+                position: absolute;
+                left: 5%;
+                transform: translateX(-5%);
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                gap: 25px;
+            }
+
+            .logo {
+                position: absolute;
+                left: 42%;
+                transform: translateX(-50%);
+                transform: translateY(-40%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .right-links {
+                position: absolute;
+                left: 90%;
+                transform: translateX(-80%);
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                padding: 10px;
+                border: 1px solid white;
+                margin-top: -10px;
+                border-radius: 10% / 25%;
+            }
+            .logo img {
+                height: 120px;
+                border: none;
+                box-shadow: none;
+                width: 200px;
+            }
+            .container {
+                position: relative;
+                width: 1000px;
+                height: 900px;
+                top: 100px;
+                left: 27%;
+                display: grid;
+                grid-template-columns: repeat(2, 300px);
+                grid-template-rows: repeat(2, 300px);
+                gap: 10px;
+            }
+            .image {
+                width: 300px;
+                height: 300px;
+                border-radius: 20px;
+                border: 2px solid #feb200;
+            }
+            #a {
+                border-bottom-right-radius: 0;
+            }
+            #b {
+                border-bottom-left-radius: 0;
+            }
+            #c {
+                border-top-right-radius: 0;
+            }
+            #d {
+                border-top-left-radius: 0;
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-links">
+                <div class="left-links">
+                    <a href="#">Our Story</a>
+                    <a href="#">Collection</a>
+                    <a href="#">Store</a>
+                </div>
+                <div class="logo">
+                    <img src="media/logo.svg" alt="Organelo Logo">
+                </div>
+                <div class="right-links">
+                    <a href="#">Contact Us</a>
+                </div>
+                </div>
+        </nav>
+    </header>
+    <div class="container">
+        <a href="#"><img src="media/1.png" alt="turmeric" class="image" id="a"></a>
+        <a href="#"><img src="media/2.png" alt="black pepper" class="image" id="b"></a>
+        <a href="#"><img src="media/3.png" alt="green cardamom" class="image" id="c"></a>
+        <a href="#"><img src="media/4.png" alt="star anise"class="image" id="d"></a>
+    </div>
+    
+</body>
+</html>

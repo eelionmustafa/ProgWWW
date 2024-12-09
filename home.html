@@ -3,7 +3,463 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css" >
-        <title>Home</title>  
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <title>Home</title>
+        <style>
+            @font-face { font-family: Loubag; src: url('Loubag-Regular.ttf'); } 
+            body, html {
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+                font-family: "Quicksand", sans-serif;
+                background-color: #FEB200;
+            }
+
+            header {
+                position: relative;
+                height: 100vh;
+            }
+
+            .navbar {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 55px;
+                display: flex;
+                align-items: center;
+                padding: 5px 10px;
+                z-index: 10;
+                font-weight: bold;
+                background: rgba(255, 255, 255, 0); 
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links {
+                list-style: none;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+            }
+            .left-links {
+                position: absolute;
+                left: 5%;
+                transform: translateX(-5%);
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                gap: 25px;
+            }
+
+            .logo {
+                position: absolute;
+                left: 42%;
+                transform: translateX(-50%);
+                transform: translateY(-40%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .right-links {
+                position: absolute;
+                left: 90%;
+                transform: translateX(-80%);
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                padding: 10px;
+                border: 1px solid white;
+                margin-top: -10px;
+                border-radius: 10% / 25%;
+            }
+            .logo img {
+                height: 120px;
+                border: none;
+                box-shadow: none;
+                width: 200px;
+            }
+
+            .hero-section {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            .background-video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .top-section {
+                background-color: #000; 
+                width: 100%;
+                height: 720px;
+                margin-top: -15px;
+                border-bottom: 30px;
+            }
+            
+            .top-section h1 {
+                position: absolute;
+                margin-top: 10px;
+                top: 120%;
+                left: 15%;
+                font-size: 100px;
+                width: 1000px;
+                font-family: Loubag;
+                letter-spacing: 3px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #FEB200;
+                transition: all 2s ease-in;
+            }
+
+            .bottom-section {
+                background-color: #FEB200;
+                width: 100%;
+                height: 400px;
+                position: absolute;
+                margin-bottom: 50px;
+            
+            }
+            .bottom-section h1 {
+                font-family: Loubag;
+                font-size: 50px;
+                color: #000;
+                letter-spacing: 2px;
+            }
+            .fresh {
+                position: absolute;
+                top: -25%;
+                left: 5%;
+            
+            }
+            .passion {
+                position: absolute;
+                top: -5%;
+                left: 16%;
+            }
+
+            .image-container {
+            position: relative; 
+            z-index: 10; 
+            display: flex;
+            justify-content: right;
+            right: 5%;
+            margin-top: -150px;
+            
+            }
+
+            .image-container img {
+            width: 620px; 
+            height: 370px;
+            border-radius: 25px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 1); 
+            }
+
+            .slider {
+                margin-top: 180px;
+                width: 100%;
+                height: var(--height);
+                overflow: hidden;
+                mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+            }
+
+            .slider .slide-track {
+                display: flex;
+                width: 100%;
+                min-width: calc(var(--width) * var(--quantity));
+                position: relative;
+            }
+
+            .slider .slide-track .slide {
+                width: var(--width);
+                height: var(--height);
+                position: absolute;
+                left: 100%;
+                animation: autoRun 15s linear infinite;
+                transition: filter 0.5s;
+                animation-delay: calc( (15s / var(--quantity)) * (var(--position) - 1))!important;
+            }
+
+            .slider .slide-track .slide img {
+                width: 100%;
+                border: 2px solid wheat;
+                border-radius: 30px;
+            }
+
+            @keyframes autoRun {
+                from {
+                    left: 100%;
+                }
+                to {
+                    left: calc(var(--width) * (-1));
+                }
+            }
+            .slider:hover .slide {
+                animation-play-state: paused!important;
+                filter: grayscale(1);
+            }
+
+            .slider .slide:hover {
+                filter: grayscale(0);
+            }
+
+            .slider[reverse="true"] {
+                margin-top: 0px;
+            }
+            .slider[reverse="true"] .slide {
+                animation: reversePlay 15s linear infinite;
+            }
+
+            @keyframes reversePlay {
+                from {
+                    left: calc(var(--width) * (-1));
+                }
+                to {
+                    left: 100%;
+                }
+            }
+
+            .rounded-section {
+            background-color: #000;
+            width: 97%;
+            height: 550px;
+            padding: 40px 20px;
+            position: relative;
+            border-bottom-left-radius: 70px; 
+            border-bottom-right-radius: 70px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+
+            .rounded-section h1 {
+            font-size: 70px; 
+            position: relative;
+            left: 5%;
+            font-family: Loubag;
+            margin: 0;
+            color: #FEB200;
+            max-width: 60%; 
+            }
+
+            .explore-button {
+            background-color: #FEB200;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            border: none;
+            border-radius: 20px;
+            position: absolute;
+            left: 65%;
+            top: 67%;
+            transition: all 0.3s ease;
+            }
+
+            .explore-button:hover {
+            background-color: #000; 
+            color: #FEB200;
+            }
+
+            .custom-footer {
+            background-color: #FEB200;
+            height: 250px;
+            text-align: center;
+            padding: 20px 0;
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            }
+
+            #logo_footer {
+                margin-bottom: 60px;
+                margin-top: 60px;
+            }
+        
+
+            .footer-nav {
+            position: relative;
+            top: 10%;
+            margin-top: 40px;
+            margin-bottom: 40px; 
+            }
+
+            .footer-policies {
+            margin-top: 70px;
+            margin-bottom: 20px; 
+            
+            }
+
+            .footer-link, .policy-link {
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+            margin: 0 10px; 
+            font-weight: bold;
+            }
+            
+            .policy-link {
+                font-size: 14px;
+            }
+
+            .footer-link:hover, .policy-link:hover {
+            color: #fff; 
+            }
+
+            .separator {
+            color: #000;
+            margin: 0 5px; 
+            }
+
+            .social-icons a {
+            display: inline-block;
+            margin: 20px 10px 0; 
+            transition: transform 0.9s ease;
+            }
+
+            .social-icons a img {
+            width: 20px; 
+            height: 20px;
+            }
+
+            .social-icons a:hover {
+            transform: scale(1.2);
+            }
+        </style>  
     </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="nav-links">
+                    <div class="left-links">
+                        <a href="#">Our Story</a>
+                        <a href="#">Collection</a>
+                        <a href="#">Store</a>
+                    </div>
+                    <div class="logo">
+                        <img src="media/logo.svg" alt="Organelo Logo">
+                    </div>
+                    <div class="right-links">
+                        <a href="#">Contact Us</a>
+                    </div>
+                    </div>
+            </nav>
+            <div class="hero-section">
+                <video autoplay muted loop class="background-video">
+                    <source src="media/Spice.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </header>
+        
+        <div class="section top-section">
+            <h1>Indian and African Spices</h1>
+          </div>
+          
+          <div class="image-container">
+            <img src="media/StockCake-Spices1.jpg" alt="Different spices">
+          </div>
+          
+          <div class="section bottom-section">
+             <h1 class="fresh">Smell the freshness.</h1>
+             <h1 class="passion">Taste the passion.</h1>
+          </div>
+        <!--Slider nga e djathta-->
+          <div class="slider" style="
+            --width: 500px;
+            --height: 350px;
+            --quantity: 5;
+          ">
+            <div class="slide-track">
+                <div class="slide" style="--position: 1">
+                    <img src="media/StockCake-1.jpg">
+                </div>
+                <div class="slide" style="--position: 2">
+                    <img src="media/StockCake-2.jpg">
+                </div>
+                <div class="slide" style="--position: 3">
+                    <img src="media/StockCake-3.jpg">
+                </div>
+                <div class="slide" style="--position: 4">
+                    <img src="media/StockCake-4.jpg"> 
+                </div>
+                <div class="slide" style="--position: 5">
+                    <img src="media/StockCake-5.jpg">
+                </div> 
+            </div>
+        </div>
+                <!--Slider tjeter nga e majta-->
+                <div class="slider" reverse="true" style="
+                    --width: 500px;
+                    --height: 350px;
+                    --quantity: 5;
+                ">
+                    <div class="slide-track">
+                        <div class="slide" style="--position: 1">
+                            <img src="media/StockCake-6.jpg">
+                        </div>
+                        <div class="slide" style="--position: 2">
+                            <img src="media/StockCake-7.jpg">
+                        </div>
+                        <div class="slide" style="--position: 3">
+                            <img src="media/StockCake-8.jpg">
+                        </div>
+                        <div class="slide" style="--position: 4">
+                            <img src="media/StockCake-9.jpg">
+                        </div>
+                        <div class="slide" style="--position: 5">
+                            <img src="media/StockCake-10.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-section">
+                    <h1>Indulge <br> our Exquisite <br> Spice Palette</h1>
+                    <a href="collection.html" class="explore-button">Explore Organelo's Collection</a>
+                  </div>
+                  <!--footer-->
+                  <footer class="custom-footer">
+                    <div class="logo">
+                        <img id="logo_footer" src="media/logo.svg" alt="Organelo Logo">
+                    </div>
+        
+                    <nav class="footer-nav">
+                      <a href="#" class="footer-link">OUR STORY</a>
+                      <span class="separator">|</span>
+                      <a href="#" class="footer-link">COLLECTION</a>
+                      <span class="separator">|</span>
+                      <a href="#" class="footer-link">STORE</a>
+                      <span class="separator">|</span>
+                      <a href="#" class="footer-link">CONTACT US</a>
+                    </nav>
+                  
+                    <div class="social-icons">
+                      <a href="#"><img src="media/instragram.svg" alt="Instagram"></a>
+                      <a href="#"><img src="media/tiktok.svg" alt="TikTok"></a>
+                      <a href="#"><img src="media/facebook.svg" alt="Facebook"></a>
+                      <a href="#"><img src="media/linkedin.svg" alt="LinkedIn"></a>
+                    </div>
+                  
+                    <div class="footer-policies">
+                      <a href="#" class="policy-link">PRIVACY POLICY</a>
+                      <span class="separator">|</span>
+                      <a href="#" class="policy-link">TERMS & CONDITIONS</a>
+                      <span class="separator">|</span>
+                      <a href="#" class="policy-link">RETURN & REFUND POLICY</a>
+                    </div>
+                  </footer>
+                  
+        
+    </body>
 </html>
