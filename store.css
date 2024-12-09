@@ -2,7 +2,9 @@
 
 body {
     margin: 0;
+    padding: 0;
     font-family: Loubag-Regular;
+   
 }
 
 .container {
@@ -36,11 +38,11 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-header{
+.h2 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 0px;
 }
 .listProduct .grid-item img {
     width: 100%;
@@ -80,8 +82,8 @@ header{
     width: 400px;
     background-color: gray;
     color: #eee;
-    position: fixed;/*fixed*/
-    top: 0;
+    position: fixed;
+    top: 60px;
     right: -400px;
     bottom: 0;
     display: grid;
@@ -99,6 +101,10 @@ body.showCart .container{
 h1{
     font-family:Loubag;
     margin:0;
+    margin-left: 25px;
+    margin-top: 20px;
+    text-align: left;
+    
    /* margin-bottom: 100px; */
 
 }
@@ -117,7 +123,7 @@ svg {
 .cartTab button{
     background-color: #feb200;
     border: none;
-    font-family: Poppins;
+    font-family: Quicksand;
     font-weight: 500;
     cursor: pointer;
 }
@@ -153,6 +159,10 @@ svg {
 }
 .icon-cart{
     position: relative;
+    left: 45%;
+    top: -50px;
+    margin: 0;
+    
     transition: transform 0.3s ease-in;
 }
 .icon-cart:hover {
@@ -170,7 +180,7 @@ svg {
     border-radius: 50%;
     color: #fff;
     top: 50%;
-    right: -20px;
+    left: 450px;
 
 }
 .listCart{
