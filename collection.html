@@ -4,7 +4,7 @@
     <!--YOYOYOY-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <title>Collection</title>
     <style>
         body {
@@ -25,7 +25,7 @@
                 max-width: 1200px;
                 margin: 0 auto;
                 padding: 0 1rem;
-                background-color: #000;
+                
             }
 
             .title {
@@ -33,61 +33,99 @@
                 color: #fff;
 
             }
+            
             .title h1{
                 text-align: center;
                 opacity: 0.7;
             }
+
             .product {
-                background-color: #000;
-                border-radius: 0.4rem;
+                width: 300px;
+                height: 300px;
+                border-radius: 20px;
+                border: 2px solid #feb200;
                 overflow: hidden;
-                box-shadow: 0 6px 12px -7px rgba(171, 171, 171, 1);
+                box-shadow: 3px 6px 12px -7px rgba(171, 171, 171, 0.5);
                 transition: box-shadow 0.4s ease-out;
                 position: relative;
             }
+
             .product:hover{
-                        box-shadow: 0 10px 12px -7px rgba(171, 171, 171, 1);
+                box-shadow: 8px 10px 12px -7px rgba(171, 171, 171, 0.9);
             }
+            
             .product-img img{
                 width: 300px;
                 height: 300px;
-                border: 2px solid #feb200;
                 border-radius: 20px;
+                
             }
-            .product-img .rear-img{
+            .product-img .rear-img {
+                margin-bottom: -10px;
+            }
+            /* .product:hover .rear-img{
+                opacity: 1;
+                z-index: 0;
+            }
+            */
+            
+            .product-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 300px);
+                grid-template-rows: repeat(2, 300px);
+                box-align: center;
+                padding: 20px;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                
+            }
+            #a {
+                border-bottom-right-radius: 0;
+            }
+            #b {
+                border-bottom-left-radius: 0;
+            }
+            #c {
+                border-top-right-radius: 0;
+            }
+            #d {
+                border-top-left-radius: 0;
+            }
+
+            figcaption {
+                color: #feb200;
+                margin-top: -20px;
+                margin-bottom: 10px;
+                font-size: 20px;
+                font-weight: bold;
+                font-size: "Quicksand", sans-serif;
+                text-align: center;
+            }
+
+            .product-img figure {
                 opacity: 0;
                 position: absolute;
                 top: 0;
                 left: 0;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                width: 300px;
+                height: 300px;
+                margin: 0;
+                border-radius: 20px;
                 z-index: -1;
-                -webkit-transition: opacity 0.4s ease-out;
-                -o-transition: opacity 0.4s ease-out;
-                transition: opacity 0.4s ease-out;
+                background-color: #000;
+                transition: opacity 0.3s ease-out;
+            
             }
-            .product:hover .rear-img{
+
+            .product:hover figure {
                 opacity: 1;
                 z-index: 0;
             }
-            .product-name{
-                font-weight: 600;
-                font-size: 1.1rem;
-            }
-
-        
-            .product-grid{
-                display: grid;
-                grid-template-columns: repeat(2, 300px);
-                grid-template-rows: repeat(2, 300px);
-                -webkit-box-align: center;
-                    -ms-flex-align: center;
-                        align-items: center;
-                -webkit-box-pack: center;
-                    -ms-flex-pack: center;
-                        justify-content: center;
-                gap: 10px;
-                background-color: #000;
-            }
-
     </style>
 </head>
 <body>
@@ -98,42 +136,94 @@
             </div>
 
             <div class = "product-grid">
-                <div class = "product">
+                <div class = "product" id="a">
                     <div class = "product-img">
-                        <img src = "media/1.png" alt = "front product image">
-                        <img src = "media/turmeric.png" alt = "rear product image" class = "rear-img">
-                        <span class = "product-name">Turmeric</span>
+                        <img src = "media/1.png" alt = "front product image" id="a">
+                        <figure id="a"><a href="turmeric.html"><img src = "media/turmeric.png" alt = "rear product image" class = "rear-img" id="a"></a>
+                        <figcaption>Turmeric</figcaption></figure>
+                        
                     </div>
+                    
                 </div>
                 
     
-                <div class = "product">
+                <div class = "product" id="b">
                     <div class = "product-img">
-                        <img src = "media/2.png" alt = "front product image">
-                        <img src = "media/black_pepper.png" alt = "rear product image" class = "rear-img">
-                        <span class = "product-name">Black Pepper</span>
+                        <img src = "media/2.png" alt = "front product image" id="b">
+                        <figure id="b"><a href="pepper.html"><img src = "media/black_pepper.png" alt = "rear product image" class = "rear-img" id="b"></a>
+                        <figcaption>Black Pepper</figcaption></figure>
+                        
                     </div>
                 
                 </div>
 
-                <div class = "product">
+                <div class = "product" id="c">
                     <div class = "product-img">
-                        <img src = "media/3.png" alt = "front product image">
-                        <img src = "media/cardamom.png" alt = "rear product image" class = "rear-img">
-                        <span class = "product-name">Green Cardamom</span>
+                        <img src = "media/3.png" alt = "front product image" id="c">
+                        <figure id="c"><a href="cardamom.html"><img src = "media/cardamom.png" alt = "rear product image" class = "rear-img" id="c"></a>
+                        <figcaption>Green Cardamom</figcaption></figure>
+                
                     </div>  
                 </div>
 
-                <div class = "product">
+                <div class = "product" id="d">
                     <div class = "product-img">
-                        <img src = "media/4.png" alt = "front product image">
-                        <img src = "media/star_anise.png" alt = "rear product image" class = "rear-img">
-                        <span class = "product-name">Star Anise</span>
+                        <img src = "media/4.png" alt = "front product image" id="d">
+                        <figure id="d"><a href="anise.html"><img src = "media/star_anise.png" alt = "rear product image" class = "rear-img" id="d"></a>
+                            <figcaption>Star Anise</figcaption></figure>
 
                     </div> 
                 </div>
             </div>
         </div>
+        <div class = "container">
+            <div class = "title">
+                <h1>African Spices</h1>
+            </div>
+
+            <div class = "product-grid">
+                <div class = "product" id="a">
+                    <div class = "product-img">
+                        <img src = "media/5.png" alt = "front product image" id="a">
+                        <figure id="a"><a href="zaatar.html"><img src = "media/Zaatar.png" alt = "rear product image" class = "rear-img" id="a"></a>
+                        <figcaption>Za'atar</figcaption></figure>
+                        
+                    </div>
+                    
+                </div>
+                
+    
+                <div class = "product" id="b">
+                    <div class = "product-img">
+                        <img src = "media/6.png" alt = "front product image" id="b">
+                        <figure id="b"><a href="saffron.html"><img src = "media/saffron.png" alt = "rear product image" class = "rear-img" id="b"></a>
+                        <figcaption>Saffron</figcaption></figure>
+                        
+                    </div>
+                
+                </div>
+
+                <div class = "product" id="c">
+                    <div class = "product-img">
+                        <img src = "media/7.png" alt = "front product image" id="c">
+                        <figure id="c"><a href="hanout.html"><img src = "media/ras_el_hanout.png" alt = "rear product image" class = "rear-img" id="c"></a>
+                        <figcaption>Ras El Hanout</figcaption></figure>
+                
+                    </div>  
+                </div>
+
+                <div class = "product" id="d">
+                    <div class = "product-img">
+                        <img src = "media/8.png" alt = "front product image" id="d">
+                        <figure id="d"><a href="mahlab.html"><img src = "media/mahlab.png" alt = "rear product image" class = "rear-img" id="d"></a>
+                            <figcaption>Mahlab</figcaption></figure>
+
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        
     </div>
     
 </body>
