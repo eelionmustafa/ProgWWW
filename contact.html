@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="contact.css">
+    <style>
+            @font-face { font-family: Loubag; src: url('Loubag-Regular.ttf'); } 
+            body, html {
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+                font-family: "Quicksand", sans-serif;
+                background-color: black;
+            }
+
+            header {
+                position: relative;
+            }
+
+            .navbar {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                padding: 7px 12px;
+                z-index: 10;
+                font-weight: bold;
+                background-color: #000; 
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links {
+                list-style: none;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+            }
+            .left-links {
+                position: absolute;
+                left: 5%;
+                transform: translateX(-5%);
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                gap: 25px;
+            }
+
+            .logo {
+                position: absolute;
+                left: 42%;
+                transform: translateX(-50%);
+                transform: translateY(-40%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .right-links {
+                position: absolute;
+                left: 90%;
+                transform: translateX(-80%);
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                padding: 10px;
+                border: 1px solid white;
+                margin-top: -10px;
+                border-radius: 10% / 25%;
+            }
+            .logo img {
+                height: 120px;
+                border: none;
+                box-shadow: none;
+                width: 200px;
+            }
+
+            .custom-footer {
+            background-color: #FEB200;
+            height: 250px;
+            text-align: center;
+            padding: 20px 0;
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            }
+
+            #logo_footer {
+                margin-bottom: 60px;
+                margin-top: 60px;
+                margin-left: 30px;
+            }
+        
+
+            .footer-nav {
+            position: relative;
+            top: 10%;
+            margin-top: 40px;
+            margin-bottom: 40px; 
+            }
+
+            .footer-policies {
+            margin-top: 70px;
+            margin-bottom: 20px; 
+            
+            }
+
+            .footer-link, .policy-link {
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+            margin: 0 10px; 
+            font-weight: bold;
+            }
+            
+            .policy-link {
+                font-size: 14px;
+            }
+
+            .footer-link:hover, .policy-link:hover {
+            color: #fff; 
+            }
+
+            .separator {
+            color: #000;
+            margin: 0 5px; 
+            }
+
+            .social-icons a {
+            display: inline-block;
+            margin: 20px 10px 0; 
+            transition: transform 0.9s ease;
+            }
+
+            .social-icons a img {
+            width: 20px; 
+            height: 20px;
+            }
+
+            .social-icons a:hover {
+            transform: scale(1.2);
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-links">
+                <div class="left-links">
+                    <a href="story.html">Our Story</a>
+                    <a href="collections.html">Collection</a>
+                    <a href="store.html">Store</a>
+                </div>
+                <div class="logo">
+                 <a href="home.html"><img src="media/logo.svg" alt="Organelo Logo"></a>
+                </div>
+                <div class="right-links" id="contact_button">
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                </div>
+        </nav>
+        
+        </header>
+    <div class="contact_component">
+        <div class="contact_content">
+            <div class="contact_heading">
+                <h1 style="font-size: 80px; margin-left: -370px; font-family: 'Quicksand'; color:#FEB200">Say Hi<br>to Organelo</h1>
+            </div>
+            <div class="contact_form">
+                <form id="form" method="post" class="contact_form">
+                    <div class="contact_form_input">
+                        <input class="input_form" name="Email" id="email" placeholder="Your email address" type="email" id="email" required>
+                        <input type="submit" data-wait="Please wait..." id="join" class="button" value="Join our family">
+                    </div>
+                </form>
+                <div class="success_message" tabindex="-1" role="region" style="display: none;">
+                    <div class="success_text">Thank you! Your submission has been received!</div>
+                </div>
+                
+                <div class="error_message" tabindex="-1" role="region" style="display: none;">
+                    <div class="error_text">0ops! Something went wrong while submitting the form.</div>
+                </div>
+            </div>
+        </div>
+<div class="contact_image">
+    <img src="media/spice_wheel.jpg" width="500" height="500"  style="border-radius: 30px; margin-left: 330px;" alt="organelo" class="contact_image">
+</div>
+
+<section id="section_faq" class="section_faq">
+    <h1 style="font-size: 75px; margin-top: -20px; color: #feb200">Frequently Asked Questions</h1>
+    <ul>
+        <li>
+            <div class="question">
+                <span>What is Organelo?</span>
+                <span class="icon"><ion-icon name="add"></ion-icon></span>
+            </div>
+            <div class="answer">
+                <span>Organelo is a e-commerce spice website.</span>
+            </div>
+        </li>
+
+        <li>
+            <div class="question">
+                <span>What are the benefits of using fresh spices in cooking?</span>
+                <span class="icon"><ion-icon name="add"></ion-icon></span>
+            </div>
+            <div class="answer">
+                <span>Fresh spices provide stronger flavor, aroma, and more nutrients compared to pre-ground spices, enhancing the taste and health benefits of your dishes.</span>
+            </div>
+        </li>
+ 
+        <li>
+            <div class="question">
+                <span>How can I contact customer service for spice-related inquiries?</span>
+                <span class="icon"><ion-icon name="add"></ion-icon></span>
+            </div>
+            <div class="answer">
+                <span>ou can contact us via our "Contact Us" page, email at support@organelo.com, or call (045) 456-789 during business hours (Mon-Fri, 9 AM - 6 PM).</span>
+            </div>
+        </li>
+
+        <li>
+            <div class="question">
+                <span>How should I store my spices for maximum freshness?</span>
+                <span class="icon"><ion-icon name="add"></ion-icon></span>
+            </div>
+            <div class="answer">
+                <span>Store your spices in a cool, dark place, away from heat and moisture, in airtight containers to preserve their flavor and potency.</span>
+            </div>
+        </li>
+
+        <li>
+            <div class="question">
+                <span>What is the shelf life of your spices?</span>
+                <span class="icon"><ion-icon name="add"></ion-icon></span>
+            </div>
+            <div class="answer">
+                <span>Spices generally last 1-3 years when stored properly, but for the best flavor, we recommend using them within 6-12 months.</span>
+            </div>
+        </li>
+
+        <li>
+            <div class="question">
+                <span>Why should I choose Organelo spices? </span>
+                <span class="icon"><ion-icon name="add"></ion-icon></span>
+            </div>
+            <div class="answer">
+                <span>Organelo offers premium, organic, and sustainably sourced spices, freshly ground for maximum flavor and quality.</span>
+            </div>
+        </li>
+    </ul>
+
+    <div class="email_num" style=" margin-bottom: 60px; color: #fff;">
+        <h2  alt="email">Email<br>support@organelo.com</h2> 
+        <h2 alt="phone">Phone<br>(045) 456-789 </h2>
+    </div>
+
+</section>
+</div>
+</div>
+<button class="open-btn" value="Contact us" style="font-family: 'Quicksand',sans-serif; font-size: 20px; background-color:#000;color:#fff   ;margin-left:650px ;margin-bottom:30px; width: 200px; padding: 20px; border-radius: 30px; border:2px solid #fff " >Contact us</button>
+<div class="input-window">
+    <button class="close-btn">x</button>
+    <h1 style="text-align: center;">Write us a message</h1>
+    <div class="input-content" style="margin-left: 50px;">
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Name" style="font-size: 20px; border-radius: 20px;" required>
+            <input type="email" id="email" placeholder="Email" style="font-size: 20px; border-radius: 20px;" required>
+            <textarea id="message" placeholder="Write your message" style="font-size: 20px; border-radius: 20px; width:80%; height: 100px; margin-bottom: 20px; padding: 10px 20px;" required></textarea>
+            <div class="success_message" style="color: green;">Message sent successfully!</div>
+            <div class="error_message" style="color: red;">Please fill in all required fields.</div>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </div>
+    
+    
+    </div>
+
+
+                  
+    <footer class="custom-footer">
+        <div class="logo">
+            <img id="logo_footer" src="media/logo.svg" alt="Organelo Logo">
+        </div>
+
+        <nav class="footer-nav">
+          <a href="story.html" class="footer-link">OUR STORY</a>
+          <span class="separator">|</span>
+          <a href="collections.html" class="footer-link">COLLECTION</a>
+          <span class="separator">|</span>
+          <a href="store.html" class="footer-link">STORE</a>
+          <span class="separator">|</span>
+          <a href="contact.html" class="footer-link">CONTACT US</a>
+        </nav>
+      
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank"><img src="media/instragram.svg" alt="Instagram"></a>
+            <a href="https://www.tiktok.com" target="_blank"><img src="media/tiktok.svg" alt="TikTok"></a>
+            <a href="https://www.facebook.com " target="_blank"><img src="media/facebook.svg" alt="Facebook"></a>
+            <a href="https://www.linkedin.com " target="_blank"><img src="media/linkedin.svg" alt="LinkedIn"></a>
+          </div>
+      
+        <div class="footer-policies">
+          <a href="#" class="policy-link">PRIVACY POLICY</a>
+          <span class="separator">|</span>
+          <a href="#" class="policy-link">TERMS & CONDITIONS</a>
+          <span class="separator">|</span>
+          <a href="#" class="policy-link">RETURN & REFUND POLICY</a>
+        </div>
+      </footer>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="contact.js"></script>
+    <script>
+        document.querySelectorAll('.question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const allAnswers = document.querySelectorAll('.answer');
+
+                allAnswers.forEach(ans => {
+                    if (ans !== answer) {
+                        ans.classList.remove('open');
+                        ans.previousElementSibling.querySelector('.icon').textContent = '+';
+                    }
+                });
+
+                answer.classList.toggle('open');
+
+                const icon = question.querySelector('.icon');
+                icon.textContent = answer.classList.contains('open') ? '-' : '+';
+            });
+        });
+    </script>
+</body>
+</html>

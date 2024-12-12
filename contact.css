@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@font-face {
+    font-family: Loubag;
+    src: url('Loubag-Regular.ttf');
+}
+
+.contact_component {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 40px 20px;
+}
+
+.contact_heading h1 {
+    font-size: 2.5rem;
+    font-family: Loubag;
+    text-align: center;
+    padding-left: 370px;
+    font-family: 'Quicksand',sans-serif;
+}
+
+.contact_form_input input {
+    width: 100%;
+    max-height: 200px;
+    padding: 16px;
+    border: 1px solid #feb200;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    padding-right: 35px;
+}
+
+.contact_form_input .button {
+    width: 110%;
+    text-align: center;
+    font-weight: bold;
+    padding: 12px;
+    background: #feb200;
+    color: #000;
+    font-size: 17px;
+    border: 1px solid #feb200;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+.success_message,
+.error_message {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.success_message {
+    background-color: #78b486;
+    color: #000;
+}
+
+.error_message {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.section_faq {
+    margin-top: 5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    width: 900px;
+    border-radius: 30px;
+}
+
+.section_faq ul {
+    margin: 3rem auto;
+    width: 75%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column; 
+    border-radius: 30px;
+    gap: 15px; 
+}
+
+#section_faq {
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+ul {
+    border-radius: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border-radius: 30px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.question {
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 25px;
+    background-color: #f9f9f9;
+}
+
+.question:hover {
+    background-color: #e0e0e0;
+}
+
+.answer {
+    border-radius: 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 10px;
+    color: #fff;
+}
+
+.answer.open {
+    border-radius: 30px;
+    max-height: 100px; /* Adjust based on content size */
+    padding: 10px;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section_faq .question > .icon {
+    transform: rotate(180deg);
+}
+
+.answer {
+    border-radius: 30px;
+    transition: max-height 0.25s ease-in-out;
+}
+
+.section_faq .answer span {
+    display: inline-block;
+    padding: 1.2rem;
+}
+
+.section_faq li:nth-child(1) {
+    animation-delay: 0.8s;
+}
+
+.section_faq li:nth-child(2) {
+    animation-delay: 1.6s;
+}
+
+.section_faq li:nth-child(3) {
+    animation-delay: 2.4s;
+}
+
+.section_faq li:nth-child(4) {
+    animation-delay: 3.2s;
+}
+
+.section_faq li:nth-child(5) {
+    animation-delay: 4.0s;
+}
+
+.section_faq li:nth-child(6) {
+    animation-delay: 4.8s;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section_faq .question.open > .icon {
+    transform: rotate(45deg);
+}
+
+
+.open-btn {
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.open-btn:hover{
+   background-color: rgb(235, 232, 232);
+}
+
+.input-window {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    position: fixed;
+    top: 0;
+    right: -600px; 
+    width: 450px;
+    height: 500px;
+    background-color: rgb(235, 232, 232);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in;
+}
+
+.input-content {
+    padding: 30px;
+}
+
+.input-window input {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+
+.input-window .close-btn {
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: rgb(235, 232, 232);
+    color:#000;
+    border: none;
+    cursor: pointer;
+}
+
+
+.input-window.open {
+    right: 0; 
+}
+
+.input-window #submit{
+        background-color: #454545;
+        color: #fff;
+        border: 1px;
+        border-radius: 20px;
+        padding: 20px;
+        margin-left:100px;
+}
+
+.input-window #submit:hover{
+    background-color:#999999;
+}

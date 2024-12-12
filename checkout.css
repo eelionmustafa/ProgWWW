@@ -1,0 +1,46 @@
+.thank-you-dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.thank-you-dialog h3 {
+    margin-bottom: 15px;
+}
+
+.thank-you-dialog button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6a5acd;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.thank-you-dialog button:hover {
+    background-color:gray;
+    color: white;
+}
+
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
