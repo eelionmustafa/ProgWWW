@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Zaatar</title>
+    <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: "Quicksand", sans-serif;
+      background-color: #feb200;
+      }
+            header {
+                position: relative;
+                height: 6vh;
+                background-color: #000;
+            }
+
+            .navbar {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                padding: 5px 10px;
+                z-index: 10;
+                font-weight: bold;
+                background-color: rgba(255, 255, 255, 0); 
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links {
+                list-style: none;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+            }
+            .left-links {
+                position: absolute;
+                left: 5%;
+                transform: translateX(-5%);
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                gap: 25px;
+            }
+
+            .logo {
+                position: absolute;
+                left: 42%;
+                transform: translateX(-50%);
+                transform: translateY(-40%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .right-links {
+                position: absolute;
+                left: 90%;
+                transform: translateX(-80%);
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                padding: 10px;
+                border: 1px solid white;
+                margin-top: -10px;
+                border-radius: 10% / 25%;
+            }
+            .logo img {
+                height: 120px;
+                border: none;
+                box-shadow: none;
+                width: 200px;
+            }
+
+    .container {
+      background-color: #000;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 50px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    .spice-image img {
+      width: 550px;
+      height: 600px;
+      margin-left: 80px;
+    }
+    
+    .spice-details {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 600px;
+      text-align: left;
+      margin-right: 50px;
+       
+    }
+    
+    .description {
+      font-size: 1rem;
+      width: 60%;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #796a37;
+    }
+    
+    .price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #796a37;
+      margin-bottom: 30px;
+      margin-top: 0px;
+    }
+    
+    .store-button {
+      display: inline-block;
+      padding: 10px 20px;
+      width: 35%;
+      text-align: center;
+      background-color: orange;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .store-button:hover {
+      background-color: darkorange;
+    }
+    
+    .spice-name {
+      font-size: 2.5rem;
+      font-weight: bold;
+      font-family: Loubag;
+      color: white;
+      text-align: left;
+      margin-top: 0px;
+      margin-bottom: 20px;
+    }
+    
+    .spice-type {
+      font-size: 1.2rem;
+      color: gray;
+      margin-top: 0px;
+      margin-left: 3px;
+    }
+    
+    /* Slide-in animation */
+    .slide-in-left {
+      transform: translateX(-100%);
+      opacity: 0;
+      transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+    
+    .slide-in-right {
+      transform: translateX(100%);
+      opacity: 0;
+      transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+    
+    .slide-in-left.show, .slide-in-right.show {
+      transform: translateX(50px);
+      opacity: 1;
+    }
+    .table-container {
+      padding-top: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 80px;
+      background-color: #796a37;
+    
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      max-width: 800px;
+      max-height: 800px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    th {
+      background-color: #000;
+      color: white;
+      font-weight: bold;
+      padding: 20px;
+      border-bottom: 2px solid #ddd;
+      font-family: Loubag;
+    }
+
+    td {
+      padding: 30px;
+      font-weight: bold;
+      border-bottom: 2px solid #000;
+    }
+
+    .char {
+      color: white;
+      letter-spacing: 0.5px;
+    }
+
+    .related-products {
+      background-color: #000;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: Loubag;
+      color: white;
+    }
+    .related-products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 70%;
+      margin-top: 20px;
+    }
+
+    .related-product {
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #796a37;
+      transition: box-shadow 0.3s;
+    }
+
+    .related-product img {
+      width: 100%;
+      width: 330px;
+      border-radius: 10px;
+    }
+
+    .related-product:hover {
+      box-shadow: 0 8px 10px rgba(255, 255, 255, 0.8);
+      border: 2px solid black;
+    }
+
+    .related-product-name {
+      margin-top: 0px;
+      font-size: 2rem;
+      color: black;
+      font-weight: bold;
+    }
+
+    .rounded-section {
+            background-color: #000;
+            width: 97%;
+            height: 550px;
+            padding: 30px 20px;
+            position: relative;
+            border-bottom-left-radius: 70px; 
+            border-bottom-right-radius: 70px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid #796a37;
+            }
+
+            .rounded-section h1 {
+            font-size: 70px; 
+            position: relative;
+            left: 5%;
+            font-family: Loubag;
+            text-align: left;
+            margin: 0;
+            color: #FEB200;
+            max-width: 60%; 
+            }
+
+            .explore-button {
+            background-color: #FEB200;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            border: none;
+            border-radius: 20px;
+            position: absolute;
+            left: 65%;
+            top: 67%;
+            transition: all 0.3s ease;
+            }
+
+            .explore-button:hover {
+            background-color: #000; 
+            color: #FEB200;
+            }
+
+            .custom-footer {
+            background-color: #FEB200;
+            height: 250px;
+            text-align: center;
+            padding: 20px 0;
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            }
+
+            #logo_footer {
+                margin-bottom: 60px;
+                margin-top: 60px;
+            }
+        
+
+            .footer-nav {
+            position: relative;
+            top: 10%;
+            margin-top: 40px;
+            margin-bottom: 40px; 
+            }
+
+            .footer-policies {
+            margin-top: 70px;
+            margin-bottom: 20px; 
+            
+            }
+
+            .footer-link, .policy-link {
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+            margin: 0 10px; 
+            font-weight: bold;
+            }
+            
+            .policy-link {
+                font-size: 14px;
+            }
+
+            .footer-link:hover, .policy-link:hover {
+            color: #fff; 
+            }
+
+            .separator {
+            color: #000;
+            margin: 0 5px; 
+            }
+
+            .social-icons a {
+            display: inline-block;
+            margin: 20px 10px 0; 
+            transition: transform 0.9s ease;
+            }
+
+            .social-icons a img {
+            width: 20px; 
+            height: 20px;
+            }
+
+            .social-icons a:hover {
+            transform: scale(1.2);
+            }
+    </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <div class="nav-links">
+            <div class="left-links">
+                <a href="story.html">Our Story</a>
+                <a href="collection.html">Collection</a>
+                <a href="store.html">Store</a>
+            </div>
+            <div class="logo">
+                <a href="home.html"><img src="media/logo.svg" alt="Organelo Logo"></a>
+            </div>
+            <div class="right-links">
+                <a href="contact.html">Contact Us</a>
+            </div>
+            </div>
+    </nav>
+</header>
+
+
+    <div class="container">
+      <div class="spice-image slide-in-left">
+        <img src="media/Zaatar.png" alt="Spice Can">
+      </div>
+      <div class="spice-details slide-in-right">
+        <h1 class="spice-name">Za'atar</h1>
+        <p class="spice-type">AFRICAN SPICE</p>
+        <p class="description">
+            Za'atar, a vibrant blend of herbs and sesame, brings the taste of the Mediterranean to every meal.</p>
+        <p class="price">€9</p>
+        <a href="store.html" class="store-button">Visit Organelo's Store</a>
+        
+      </div>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Characteristics</th>
+            <th>Descriptions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="char">Aroma</td>
+            <td>Earthy, herbaceous, and slightly tangy with a hint of nuttiness from toasted sesame seeds</td>
+          </tr>
+          <tr>
+            <td class="char">Flavor</td>
+            <td>A savory blend of tangy, herbal, and nutty notes with a subtle citrusy zing from sumac</td>
+          </tr>
+          <tr>
+            <td class="char">Uses</td>
+            <td>A staple in Middle Eastern cuisine, often sprinkled on bread, mixed with olive oil as a dip, or used to season meats, vegetables, and salads</td>
+          </tr>
+          <tr>
+            <td class="char">Health Benefits</td>
+            <td>Packed with antioxidants from sumac and thyme, it supports immune health and digestion</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="related-products">
+      <h1>Related Products</h1>
+      <div class="related-products-grid">
+        <div class="related-product">
+          <a href="saffron.html"><img src="media/saffron.png" alt="Related Spice 1"></a>
+          <p class="related-product-name">Saffron</p>
+        </div>
+        <div class="related-product">
+          <a href="hanout.html"><img src="media/ras_el_hanout.png" alt="Related Spice 2"></a>
+          <p class="related-product-name">Ras El Hanout</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rounded-section">
+      <h1>Indulge <br> our Exquisite <br> Spice Palette</h1>
+      <a href="story.html" class="explore-button">Explore Organelo's Story</a>
+    </div>
+    <!--footer-->
+    <footer class="custom-footer">
+        <div class="logo">
+            <img id="logo_footer" src="media/logo.svg" alt="Organelo Logo">
+        </div>
+  
+        <nav class="footer-nav">
+          <a href="story.html" class="footer-link">OUR STORY</a>
+          <span class="separator">|</span>
+          <a href="collection.html" class="footer-link">COLLECTION</a>
+          <span class="separator">|</span>
+          <a href="store.html" class="footer-link">STORE</a>
+          <span class="separator">|</span>
+          <a href="contact.html" class="footer-link">CONTACT US</a>
+        </nav>
+      
+        <div class="social-icons">
+          <a href="https://www.instagram.com"><img src="media/instragram.svg" alt="Instagram"></a>
+          <a href="https://www.tiktok.com"><img src="media/tiktok.svg" alt="TikTok"></a>
+          <a href="https://www.facebook.com"><img src="media/facebook.svg" alt="Facebook"></a>
+          <a href="https://www.linkedin.com"><img src="media/linkedin.svg" alt="LinkedIn"></a>
+        </div>
+      
+        <div class="footer-policies">
+          <a href="#" class="policy-link">PRIVACY POLICY</a>
+          <span class="separator">|</span>
+          <a href="#" class="policy-link">TERMS & CONDITIONS</a>
+          <span class="separator">|</span>
+          <a href="#" class="policy-link">RETURN & REFUND POLICY</a>
+        </div>
+      </footer>
+    <script src="spices.js"></script>
+
+   
+</body>
+</html>
